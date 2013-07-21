@@ -1,12 +1,10 @@
-# karma-coffee-preprocessor
+# karma-live-preprocessor
 
-> Preprocessor to compile CoffeeScript on the fly.
+> Preprocessor to compile LiveScript on the fly.
 
 ## Installation
 
-**This plugin ships with Karma by default, so you don't need to install it, it should just work ;-)**
-
-The easiest way is to keep `karma-coffee-preprocessor` as a devDependency in your `package.json`.
+The easiest way is to keep `karma-live-preprocessor` as a devDependency in your `package.json`.
 ```json
 {
   "devDependencies": {
@@ -18,7 +16,7 @@ The easiest way is to keep `karma-coffee-preprocessor` as a devDependency in you
 
 You can simple do it by:
 ```bash
-npm install karma-coffee-preprocessor --save-dev
+npm install karma-live-preprocessor --save-dev
 ```
 
 ## Configuration
@@ -28,17 +26,17 @@ Following code shows the default configuration...
 module.exports = function(config) {
   config.set({
     preprocessors: {
-      '**/*.coffee': ['coffee']
+      '**/*.ls': ['ls']
     },
     
-    coffeePreprocessor: {
-      // options passed to the coffee compiler
+    livePreprocessor: {
+      // options passed to the live compiler
       options: {
         bare: true
       },
       // transforming the filenames
       transformPath: function(path) {
-        return path.replace(/\.js$/, '.coffee');
+        return path.replace(/\.js$/, '.ls');
       }
     }
   });
@@ -46,8 +44,4 @@ module.exports = function(config) {
 ```
 
 ----
-
-For more information on Karma see the [homepage].
-
-
-[homepage]: http://karma-runner.github.com
+Based on [karma-coffee-preprocessor](https://github.com/karma-runner/karma-coffee-preprocessor)

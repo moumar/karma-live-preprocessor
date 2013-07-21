@@ -1,16 +1,16 @@
-var coffee = require('coffee-script');
+var live = require('LiveScript');
 
-var createCoffeePreprocessor = function(args, config, logger, helper) {
+var createLivePreprocessor = function(args, config, logger, helper) {
   config = config || {};
 
-  var log = logger.create('preprocessor.coffee');
+  var log = logger.create('preprocessor.live');
   var defaultOptions = {
     bare: true
   };
   var options = helper.merge(defaultOptions, args.options || {}, config.options || {});
 
   var transformPath = args.transformPath || config.transformPath || function(filepath) {
-    return filepath.replace(/\.coffee$/, '.js');
+    return filepath.replace(/\.ls/, '.js');
   };
 
   return function(content, file, done) {
@@ -20,10 +20,10 @@ var createCoffeePreprocessor = function(args, config, logger, helper) {
     file.path = transformPath(file.originalPath);
 
     // Clone the options because coffee.compile mutates them
-    opts = helper._.clone(options)
+    var opts = helper._.clone(options);
 
     try {
-      processed = coffee.compile(content, opts);
+      processed = live.compile(content, opts);
     } catch (e) {
       log.error('%s\n  at %s', e.message, file.originalPath);
     }
@@ -32,9 +32,9 @@ var createCoffeePreprocessor = function(args, config, logger, helper) {
   };
 };
 
-createCoffeePreprocessor.$inject = ['args', 'config.coffeePreprocessor', 'logger', 'helper'];
+createLivePreprocessor.$inject = ['args', 'config.livePreprocessor', 'logger', 'helper'];
 
 // PUBLISH DI MODULE
 module.exports = {
-  'preprocessor:coffee': ['factory', createCoffeePreprocessor]
+  'preprocessor:live': ['factory', createLivePreprocessor]
 };
