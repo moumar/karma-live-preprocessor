@@ -9,7 +9,7 @@ The easiest way is to keep `karma-live-preprocessor` as a devDependency in your 
 {
   "devDependencies": {
     "karma": "~0.9",
-    "karma-coffee-preprocessor": "~0.0.1"
+    "karma-live-preprocessor": "~0.0.1"
   }
 }
 ```
@@ -26,9 +26,9 @@ Following code shows the default configuration...
 module.exports = function(config) {
   config.set({
     preprocessors: {
-      '**/*.ls': ['ls']
+      '**/*.ls': 'live'
     },
-    
+
     livePreprocessor: {
       // options passed to the live compiler
       options: {
