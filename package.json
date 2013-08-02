@@ -1,6 +1,6 @@
 {
   "name": "karma-live-preprocessor",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Karma plugin. Compile livescript on the fly.",
   "main": "index.js",
   "scripts": {
