@@ -20,7 +20,7 @@
     "LiveScript": "~1.1.1"
   },
   "peerDependencies": {
-    "karma": "~0.9"
+    "karma": ">=0.9"
   },
   "license": "MIT",
   "devDependencies": {
