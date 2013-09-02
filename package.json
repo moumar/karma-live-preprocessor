@@ -17,10 +17,10 @@
   ],
   "author": "Kevin Mees <kev.mees@gmail.com>",
   "dependencies": {
-    "LiveScript": "~1.1.1"
+    "LiveScript": ">=1.1.1"
   },
   "peerDependencies": {
-    "karma": "~0.9"
+    "karma": ">=0.9"
   },
   "license": "MIT",
   "devDependencies": {
