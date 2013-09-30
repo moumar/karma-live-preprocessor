@@ -8,8 +8,8 @@ The easiest way is to keep `karma-live-preprocessor` as a devDependency in your 
 ```json
 {
   "devDependencies": {
-    "karma": "~0.9",
-    "karma-live-preprocessor": "~0.0.1"
+    "karma": "~0.10.0",
+    "karma-live-preprocessor": "~0.2.0"
   }
 }
 ```

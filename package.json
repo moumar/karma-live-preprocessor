@@ -1,6 +1,6 @@
 {
   "name": "karma-live-preprocessor",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A Karma plugin. Compile livescript on the fly.",
   "main": "index.js",
   "scripts": {
@@ -17,10 +17,10 @@
   ],
   "author": "Kevin Mees <kev.mees@gmail.com>",
   "dependencies": {
-    "LiveScript": ">=1.1.1"
+    "LiveScript": "~1.2.0"
   },
   "peerDependencies": {
-    "karma": ">=0.9"
+    "karma": "~0.10.0"
   },
   "license": "MIT",
   "devDependencies": {
