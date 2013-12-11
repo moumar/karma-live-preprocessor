@@ -13,7 +13,7 @@
   "keywords": [
     "karma-plugin",
     "karma-preprocessor",
-    "lviescript"
+    "livescript"
   ],
   "author": "Kevin Mees <kev.mees@gmail.com>",
   "dependencies": {
