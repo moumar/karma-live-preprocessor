@@ -19,7 +19,7 @@ var createLivePreprocessor = function(args, config, logger, helper) {
     log.debug('Processing "%s".', file.originalPath);
     file.path = transformPath(file.originalPath);
 
-    // Clone the options because coffee.compile mutates them
+    // Clone the options because live.compile mutates them
     var opts = helper._.clone(options);
 
     try {
@@ -34,7 +34,7 @@ var createLivePreprocessor = function(args, config, logger, helper) {
 
 createLivePreprocessor.$inject = ['args', 'config.livePreprocessor', 'logger', 'helper'];
 
-// PUBLISH DI MODULE
+// Publish the module
 module.exports = {
   'preprocessor:live': ['factory', createLivePreprocessor]
 };
