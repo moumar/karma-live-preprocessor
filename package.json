@@ -17,7 +17,7 @@
   ],
   "author": "Kevin Mees <kev.mees@gmail.com>",
   "dependencies": {
-    "LiveScript": "~1.2.0"
+    "LiveScript": "~1.3.0"
   },
   "peerDependencies": {
     "karma": ">=0.10"
